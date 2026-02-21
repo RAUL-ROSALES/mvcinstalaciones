@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mvcinstalaciones.com/sitemap.xml
