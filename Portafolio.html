@@ -1,0 +1,112 @@
+    <link rel="stylesheet" href="css/styles.css" />
+    <body>
+        <header id="main-header"></header>
+
+    <section id="servicios">
+
+      <div class="sectionTitle">
+        <h2>Servicios</h2>
+      </div>
+
+      <div class="grid3">
+
+        <div class="card">
+          <span class="tag">Industrial</span>
+          <img src="images/ElectronicaIndustrial.png" alt="Tablero">
+          <h3>Instalaciones industriales</h3>
+          <p> MVC es una empresa especializada en Instalaciones Eléctricas . Contamos con ingenieros especializados en el área, 
+              los cuales diseñan y proyectan a tus necesidad.
+              Nuestros técnicos instaladores se encuentran altamente calificados para realizar un trabajo de calidad.</p>
+        </div>
+
+        <div class="card">
+          <span class="tag">Instalaciones hidrosanitarias</span>
+          <img src="images/Hidraulica.jpeg" alt="Tablero">
+          <h3>Instalación hidrosanitarias</h3>
+          <p> Contamos con un equipo de profesionales especialistas en el diseño de instalación hidrosanitarias, 
+              nuestro equipo siempre buscara utilizar los mejores materiales que existen en el mercado para desarrollar tu proyecto.</p>
+        </div>
+
+        <div class="card">
+          <span class="tag">Mantenimiento</span>
+          <img src="images/mantenimient.jpg" alt="Tablero">
+          <h3>Diagnóstico y corrección</h3>
+          <p>Detectamos y solucionamos fallas eléctricas mediante revisiones técnicas, 
+            pruebas y mantenimiento correctivo, garantizando seguridad, 
+            buen funcionamiento y prevención de futuros problemas.</p>
+        </div>
+
+        <div class="card">
+          <span class="tag">Obra Civil</span>
+           <img src="images/civil.jpeg" alt="Imagen Ilustrativa de Obra Civil">
+            <h3>Obra Civil</h3>
+             <p>Contamos con personal calificado para construcción de muros de hormigón,
+             muros ligeros, aplicación de pisos cerámicos y acabados (accesorios), 
+             nuestro personal esta dirigido por arquitectos experimentados los cuales nos ayudan a dar soluciones a cualquier inconveniente 
+             durante la ejecución de los trabajos.</p>
+        </div>
+        
+        <div class="card">
+          <span class="tag">Herreria</span>
+          <img src="images/herreria.webp" alt="Imagen Ilustrativa de Herreria">
+          <h3>Herreria</h3>
+          <p>Contamos con técnicos soldadores e ingenieros calificados para la construcción de estructuras metálicas,
+             herrerías tales como; portones abatibles, protecciones para ventanas, pérgolas, mezanines, barandales industriales y mucho mas.
+             Nuestro personal constantemente son capacitados para el uso y manejo de herramientas las cuales nos ayudan a realizar y entregar trabajos 
+             de calidad.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="portafolio">
+      <div class="sectionTitle">
+        <h2>Algunos de Nustros Proyectos</h2>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <span class="tag">Proyecto #1</span>
+          <div class="thumb">Sube foto aquí</div>
+          <h3>Tablero / Centro de carga</h3>
+          <p>Descripción corta: qué se hizo, dónde, tiempo, resultado, materiales.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Proyecto #2</span>
+          <div class="thumb">Sube foto aquí</div>
+          <h3>Canalización y cableado</h3>
+          <p>Descripción corta del trabajo y fotos del antes/después.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Proyecto #3</span>
+          <div class="thumb">Sube foto aquí</div>
+          <h3>Iluminación industrial</h3>
+          <p>Descripción corta y beneficios (ahorro, seguridad, cumplimiento).</p>
+        </div>
+      </div>
+    </section>
+
+       <script>
+      // Carga header.html dentro del <header id="main-header">
+     fetch('includes/header.html')
+     .then(response => response.text())
+     .then(data => {
+      document.getElementById('main-header').innerHTML = data;
+     })
+      .catch(err => console.error('Error cargando header:', err));
+    </script> 
+    
+        <div id="main-footer"></div>
+    <script>
+  fetch('includes/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('main-footer').innerHTML = data;
+
+    // 👉 pone el año
+    document.getElementById("y").textContent = new Date().getFullYear();
+  });
+</script>
+
+    </body>
+    
