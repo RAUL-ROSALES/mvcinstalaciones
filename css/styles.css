@@ -37,7 +37,19 @@ header{
 }
 
 .brand{
-  display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.3px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  font-weight:700;
+  letter-spacing:.3px;
+  text-decoration:none;   /* quita subrayado */
+  color:inherit;          /* hereda color */
+}
+
+.brand img{
+  height:40px;     /* controla tamaño del brand */
+  width:auto;
+  object-fit:contain;
 }
 
 .logo{
@@ -300,6 +312,32 @@ footer{
   border-top:1px solid var(--line);
   margin-top:12px;
 }
+
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  z-index:999;
+  transition:.3s;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.1);
+}
+
+.whatsapp-float svg{
+  width:32px;
+  fill:#fff;
+}
+
 
 
 @media (max-width: 900px){

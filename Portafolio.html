@@ -108,5 +108,16 @@
   });
 </script>
 
+<div id="whatsapp-btn"></div>
+
+<script>
+fetch('includes/whatsapp.html')
+.then(r => r.text())
+.then(data => {
+  document.getElementById('whatsapp-btn').innerHTML = data;
+});
+</script>
+
+
     </body>
 

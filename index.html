@@ -130,13 +130,14 @@
 
     <section id="contact">
     <!-- 👇 ESTE ES EL CONTENEDOR GRID -->
+     <h2>Contactanos</h2>
      <div class="contact">
     <!-- TARJETA WHATSAPP -->
     <div class="card">
       <h3>WhatsApp</h3>
-      <p>663 301 72 63</p>
+      <h2>664 362 77 39</h2>
       <div style="margin-top:12px">
-        <a class="btn primary whatsapp-btn" href="https://wa.me/526633017263" target="_blank">
+        <a class="btn primary whatsapp-btn" href="https://wa.me/526643627739" target="_blank">
           <img src="images/whatsapp.png" alt="Logo de WhatsApp">
           Contáctanos
         </a>
@@ -146,7 +147,7 @@
     <!-- TARJETA CORREO -->
     <div class="card">
       <h3>Correo</h3>
-      <p>mvcinstalaciones@gmail.com</p>
+      <h2>mvcinstalaciones@gmail.com</h2>
       <div style="margin-top:12px">
         <a class="btn primary email-btn" href="mailto:mvcinstalaciones@gmail.com">
           <img src="images/email.png" alt="Logo de Gmail">
@@ -154,46 +155,84 @@
         </a>
       </div>
     </div>
+     </div>
+      </section>
 
-    <div class="card">
+    <section id="contact">
+      <h2>Siguenos en redes sociales</h2>
+      <div class="contact">
+      <div class="card">
       <h3>Tiktok</h3>
-      <p>mvcinstalaciones</p>
+      <h2>mvcinstalaciones</h2>
       <div style="margin-top:12px">
-        <a class="btn primary email-btn" href="https://www.tiktok.com/@mvc.instalaciones">
-          <img src="images/tiktok.png" alt="Logo de TikTok">
-          Siguenos en TikTok
-        </a>
+        <a class="btn primary email-btn"
+         href="https://www.tiktok.com/@mvc.instalaciones"
+         target="_blank"
+         rel="noopener noreferrer">
+         Siguenos en Tiktok
+       </a>
       </div>
     </div>
 
      <div class="card">
       <h3>Facebook</h3>
-      <p>mvcinstalaciones</p>
+      <h2>mvcinstalaciones</h2>
       <div style="margin-top:12px">
-        <a class="btn primary email-btn" href="https://www.facebook.com/electrical.technicianmvc?locale=es_LA">
-          <img src="images/facebook.png" alt="Logo de Facebook">
-          Siguenos en Facebook
-        </a>
+        <a class="btn primary email-btn"
+         href="https://www.facebook.com/electrical.technicianmvc?locale=es_LA"
+         target="_blank"
+         rel="noopener noreferrer">
+         Siguenos en Facebook
+       </a>
       </div>
     </div>
     
     <div class="card">
       <h3>Instagram</h3>
-      <p>mvcinstalaciones</p>
+      <h2>mvcinstalaciones</h2>
       <div style="margin-top:12px">
-        <a class="btn primary email-btn" href="https://www.instagram.com/mvcinstalaciones/">
-          <img src="images/Instagram.png" alt="Logo de Instagram">
-          Siguenos en Instagram
-        </a>
+                <a class="btn primary email-btn"
+         href="https://www.instagram.com/mvcinstalaciones/"
+         target="_blank"
+         rel="noopener noreferrer">
+         Siguenos en Instagram
+       </a>
       </div>
     </div>
+    </div>
 
-     </div>
-     
-      </section>
+    </section>
 
 </script>
 
+<script>
+/* HEADER */
+fetch('includes/header.html')
+.then(response => response.text())
+.then(data => {
+  document.getElementById('main-header').innerHTML = data;
+});
+
+/* FOOTER */
+fetch('includes/footer.html')
+.then(response => response.text())
+.then(data => {
+  document.getElementById('main-footer').innerHTML = data;
+  document.getElementById("y").textContent = new Date().getFullYear();
+});
+</script>
+
+<div id="whatsapp-btn"></div>
+
+<script>
+fetch('includes/whatsapp.html')
+.then(r => r.text())
+.then(data => {
+  document.getElementById('whatsapp-btn').innerHTML = data;
+});
+</script>
+
+<div id="main-footer"></div>
    </body>
 
 </html>
