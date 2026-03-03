@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <title>MVC Instalaciones</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -224,15 +226,21 @@ fetch('includes/footer.html')
 
 <div id="whatsapp-btn"></div>
 
-<script>
-fetch('includes/whatsapp.html')
-.then(r => r.text())
-.then(data => {
+ <script>
+  fetch('includes/whatsapp.html')
+  .then(r => r.text())
+  .then(data => {
   document.getElementById('whatsapp-btn').innerHTML = data;
-});
+  });
 </script>
 
-<div id="main-footer"></div>
-   </body>
+   <div id="main-footer"></div>
+  <script>
+    function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+    }
+</script>
+
+</body>
 
 </html>
