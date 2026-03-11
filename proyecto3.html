@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="css/styles.css" />
+ <body>
+        <header id="main-header"></header>
+
+    <section id="servicios">
+    </section>
+
+       <script>
+      // Carga header.html dentro del <header id="main-header">
+     fetch('includes/header.html')
+     .then(response => response.text())
+     .then(data => {
+      document.getElementById('main-header').innerHTML = data;
+     })
+      .catch(err => console.error('Error cargando header:', err));
+       </script> 
+    
+        <div id="main-footer"></div>
+       <script>
+  fetch('includes/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('main-footer').innerHTML = data;
+
+    // 👉 pone el año
+    document.getElementById("y").textContent = new Date().getFullYear();
+  });
+       </script>
+
+       <div id="whatsapp-btn"></div>
+
+       <script>
+fetch('includes/whatsapp.html')
+.then(r => r.text())
+.then(data => {
+  document.getElementById('whatsapp-btn').innerHTML = data;
+});
+       </script>
+
+
+ </body>
