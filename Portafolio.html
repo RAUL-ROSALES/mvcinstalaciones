@@ -1,6 +1,6 @@
     <link rel="stylesheet" href="css/styles.css" />
     <body>
-        <header id="main-header"></header>
+     <header id="main-header"></header>
 
     <section id="servicios">
 
@@ -100,39 +100,40 @@
 
       </div>
     </section>
-
-       <script>
-      // Carga header.html dentro del <header id="main-header">
-     fetch('includes/header.html')
-     .then(response => response.text())
-     .then(data => {
-      document.getElementById('main-header').innerHTML = data;
-     })
-      .catch(err => console.error('Error cargando header:', err));
-    </script> 
     
-        <div id="main-footer"></div>
     <script>
-  fetch('includes/footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('main-footer').innerHTML = data;
+/* HEADER */
+fetch('includes/header.html')
+.then(response => response.text())
+.then(data => {
+  document.getElementById('main-header').innerHTML = data;
+});
 
-    // 👉 pone el año
-    document.getElementById("y").textContent = new Date().getFullYear();
-  });
+/* FOOTER */
+fetch('includes/footer.html')
+.then(response => response.text())
+.then(data => {
+  document.getElementById('main-footer').innerHTML = data;
+  document.getElementById("y").textContent = new Date().getFullYear();
+});
 </script>
 
 <div id="whatsapp-btn"></div>
 
-<script>
-fetch('includes/whatsapp.html')
-.then(r => r.text())
-.then(data => {
+ <script>
+  fetch('includes/whatsapp.html')
+  .then(r => r.text())
+  .then(data => {
   document.getElementById('whatsapp-btn').innerHTML = data;
-});
+  });
 </script>
 
+   <div id="main-footer"></div>
+  <script>
+    function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+    }
+</script>
 
 </body>
 

@@ -15,6 +15,13 @@
 <body>
   <header id="main-header"></header>
 
+  <div id="paquito-bienvenida">
+      <img src="/images/paquito.png" alt="Paquito">
+     <div class="mensaje">
+       ¡Hola! Bienvenido a MVC Instalaciones 👋
+     </div>
+  </div>
+
   <main class="container">
     
     <section class="hero" id="inicio">
@@ -38,7 +45,7 @@
 
        <!-- IMAGEN -->
         <div class="hero-img">
-  <img src="images/logo.jpeg" alt="Logo MVC">
+        <img src="images/logo.jpeg" alt="Logo MVC">
 </div>
       
     </section>
@@ -160,7 +167,7 @@
      </div>
       </section>
 
-    <section id="contact">
+    <section id="social">
       <h2>Siguenos en redes sociales</h2>
       <div class="contact">
       <div class="card">
@@ -239,6 +246,24 @@ fetch('includes/footer.html')
     function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
     }
+</script>
+
+<script>
+
+if(!localStorage.getItem("paquitoMostrado")){
+
+setTimeout(()=>{
+document.getElementById("paquito-bienvenida").style.display="none";
+},6000);
+
+localStorage.setItem("paquitoMostrado","true");
+
+}else{
+
+document.getElementById("paquito-bienvenida").style.display="none";
+
+}
+
 </script>
 
 </body>

@@ -237,6 +237,10 @@ section{padding:38px 0}
   display:grid; grid-template-columns: 1fr 1fr; gap:14px;
 }
 
+.social{
+  display:grid; grid-template-columns: 1fr 1fr; gap:14px;
+}
+
 /* Botón de WhatsApp con logo */
 .whatsapp-btn {
   display: inline-flex;
@@ -406,6 +410,41 @@ footer{
   }
 }
 
+#paquito-bienvenida{
+position:fixed;
+left:20px;
+bottom:20px;
+display:flex;
+align-items:center;
+gap:10px;
+background:#0b0f19;
+padding:10px 15px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+z-index:999;
+animation:entrada 0.8s ease;
+}
+
+#paquito-bienvenida img{
+width:90px;
+}
+
+#paquito-bienvenida .mensaje{
+color:white;
+font-size:14px;
+max-width:180px;
+}
+
+@keyframes entrada{
+from{
+opacity:0;
+transform:translateX(-50px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
 
 
 @media (max-width: 900px){
